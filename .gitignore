@@ -90,3 +90,6 @@ target/
 
 # My Files
 .SCRATCH
+
+data-science/storage/
+data-science/pdf/
