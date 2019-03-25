@@ -1,0 +1,6 @@
+{
+    "name" : "pdfsearch",
+    "fs" : {
+      "url" : "/usr/share/fscrawler/data"
+    }
+}
