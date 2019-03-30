@@ -1,5 +1,5 @@
 # Dockerfile for ELK stack
-# Elasticsearch, Logstash, Kibana 6.6.1
+# Elasticsearch, Logstash, Kibana 6.7.0
 
 # Build with:
 # docker build -t <repo-user>/elk .
@@ -38,8 +38,9 @@ RUN set -x \
  && apt-get clean \
  && set +x
 
+ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64/jre
 
-ENV ELK_VERSION 6.6.1
+ENV ELK_VERSION 6.7.0
 
 ### install Elasticsearch
 
@@ -174,10 +175,16 @@ RUN chmod +x /usr/local/bin/start.sh
 WORKDIR ${ES_HOME}
 
 RUN yes | CONF_DIR=/etc/elasticsearch gosu elasticsearch bin/elasticsearch-plugin \
-    install -b ingest-geoip
+    install -b ingest-attachment
 
 RUN yes | CONF_DIR=/etc/elasticsearch gosu elasticsearch bin/elasticsearch-plugin \
-    install -b ingest-attachment
+    install https://oss.sonatype.org/service/local/repositories/releases/content/info/johtani/elasticsearch/plugin/ingest/ingest-csv/6.7.0.0/ingest-csv-6.7.0.0.zip
+
+RUN yes | CONF_DIR=/etc/elasticsearch gosu elasticsearch bin/elasticsearch-plugin \
+    install https://github.com/NLPchina/elasticsearch-sql/releases/download/6.7.0.0/elasticsearch-sql-6.7.0.0.zip
+
+RUN yes | CONF_DIR=/etc/elasticsearch gosu elasticsearch bin/elasticsearch-plugin \
+    install -b ingest-geoip
 
 EXPOSE 5601 9200 9300 5044
 VOLUME /var/lib/elasticsearch
