@@ -35,9 +35,20 @@ Wait for ES to start may take a couple minutes.
 
 Open a New Term Window cmd-T in iTerm2
 
-FSCrawler:
+FSCrawler Options:
+
+-p -> Original PDF Crawl
+-i -> Crawls the aon-ins folder
+-m -> Crawls the aon-mcd folder
+
+FSCrawler for aon-ins:
 ```bash
-sh fscrawl.sh
+sh fscrawl.sh -i
+```
+
+FSCrawler for aon-mcd:
+```bash
+sh fscrawl.sh -m
 ```
 
 Will return to command prompt when FSCrawl is finished.
