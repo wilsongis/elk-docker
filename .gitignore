@@ -93,4 +93,4 @@ target/
 
 # Project Specific Files
 *.pdf
-data-science/storage/
+data-science/storage/*
