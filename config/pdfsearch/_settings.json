@@ -2,7 +2,8 @@
   "name" : "pdfsearch",
   "fs" : {
     "url" : "/usr/share/fscrawler/data",
-    "pdf_ocr" : "false"
+    "pdf_ocr" : "false",
+    "store_source" : "true"
   }
 }
   
