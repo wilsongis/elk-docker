@@ -1,0 +1,9 @@
+{
+  "name" : "aon-mcd",
+  "fs" : {
+    "url" : "/usr/share/fscrawler/data",
+    "pdf_ocr" : "false",
+    "store_source" : "true"
+  }
+}
+  
