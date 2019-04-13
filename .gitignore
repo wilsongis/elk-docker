@@ -92,5 +92,5 @@ target/
 .SCRATCH
 
 # Project Specific Files
-nodes/
 *.pdf
+data-science/storage/
