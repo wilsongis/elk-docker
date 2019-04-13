@@ -91,8 +91,6 @@ target/
 # My Files
 .SCRATCH
 
-/data-science/storage/
-/data-science/nodes/
-/data-science/pdf/
-/data-science/aon-mcd/
-/data-science/aon-ins/
+# Project Specific Files
+nodes/
+*.pdf
