@@ -1,7 +1,7 @@
 
 #!/bin/sh 
 while getopts 'pim' OPTION; do
-  docker pull shadiakiki1986/fscrawler
+  docker pull shadiakiki1986/fscrawler:latest
   case "$OPTION" in
     p)
       echo "FSCrawl PDF Tests"

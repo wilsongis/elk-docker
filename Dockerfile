@@ -7,7 +7,7 @@
 # Run with:
 # docker run -p 5601:5601 -p 9200:9200 -p 5044:5044 -it --name elk <repo-user>/elk
 
-FROM sebp/elk:latest
+FROM sebp/elk:670
 MAINTAINER Mike Wilson 
 ENV REFRESHED_AT 2019-04-13
 
